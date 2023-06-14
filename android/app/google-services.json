@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "816635520689",
+    "project_id": "gdg-community-app-b00aa",
+    "storage_bucket": "gdg-community-app-b00aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816635520689:android:868665273dc0824ec7e490",
+        "android_client_info": {
+          "package_name": "com.example.gdg_community_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816635520689-numf5r3421ccue78s6mijr0hrl9v2upi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6bNxew7WvCUlgvyiQAb7GEfEPyB_89J0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816635520689-numf5r3421ccue78s6mijr0hrl9v2upi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
