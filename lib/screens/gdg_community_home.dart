@@ -1,4 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gdg_community_app/screens/support_page.dart';
+import 'package:gdg_community_app/widgets/member_list.dart';
 
 import '../models/model.dart';
 
@@ -46,8 +50,46 @@ class GDGCommunityHome extends StatelessWidget {
                 ],
               ),
             ),
+            Expanded(
+              child: FutureBuilder(
+                future: FirebaseFirestore.instance.collection('team').get(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    List<QueryDocumentSnapshot> memberDocs =
+                        (snapshot.data as QuerySnapshot).docs;
+
+                    List<TeamMember> members = memberDocs
+                        .map((doc) => TeamMember.fromJson(
+                            doc.data() as Map<String, dynamic>))
+                        .toList();
+
+                    return TeamMemberList(members: members);
+                  }
+
+                  return const Center(
+                    child: SizedBox(
+                      width: 50,
+                      height: 50,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 5,
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Utils.mainColor),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => GDGCommunitySupport()));
+        },
+        backgroundColor: Utils.secondaryColor,
+        child: const Icon(Icons.chat_bubble, color: Colors.white),
       ),
     );
   }

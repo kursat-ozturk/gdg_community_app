@@ -12,3 +12,19 @@ class Utils {
   static String gdgCommunityLogoBlue =
       'https://romanejaquez.github.io/hello-flutter-web/assets/gdgcommunity_blue.png';
 }
+
+class TeamMember {
+  String? fullName;
+  String? photoUrl;
+  String? title;
+
+  TeamMember({this.fullName, this.photoUrl, this.title});
+
+  factory TeamMember.fromJson(Map<String, dynamic> json) {
+    return TeamMember(
+      fullName: json['fullName'],
+      photoUrl: json['photoUrl'],
+      title: json['title'],
+    );
+  }
+}
