@@ -1,16 +1,16 @@
 # gdg_community_app
 
-A new Flutter project.
+## Roman Just Codes Flutter Codelabs Project 6
 
-## Getting Started
+## In this codelab, I accomplished the following:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Created a Firebase project and interact with the Firebase Console
+- Set up your Cloud Firestore database and pre-seeded it with data
+- Set up your Firebase configuration in your Flutter project (DartPad)
+- Created a landing page (GDGCommunityHome)
+- Created custom widgets (GDGCommunitySupportMeter, GDGCommunityGoal, etc.)
+- Learned about collections and documents in Firebase
+- Implemented one-time fetching of data from Firebase using .get() and FutureBuilder
+- Mapping Firebase data into PODO (Plain Ol' Dart Objects)
+- Created utility methods in the Utils class for reusing and sharing code througout
+- Implemented real-time message receipt using Streams and StreamBuilder
