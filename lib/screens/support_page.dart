@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gdg_community_app/widgets/community_button.dart';
 import 'package:gdg_community_app/widgets/community_goal.dart';
@@ -8,7 +7,7 @@ import 'package:gdg_community_app/widgets/support_meter.dart';
 import '../models/model.dart';
 
 class GDGCommunitySupport extends StatelessWidget {
-  final int messagesGoal = 300;
+  final int messagesGoal = 29;
 
   const GDGCommunitySupport({super.key});
 
@@ -37,7 +36,7 @@ class GDGCommunitySupport extends StatelessWidget {
             Text(
               'Goal: $messagesGoal Messages',
               textAlign: TextAlign.center,
-              style: TextStyle(color: Utils.mainColor, fontSize: 15),
+              style: const TextStyle(color: Utils.mainColor, fontSize: 15),
             ),
             Expanded(
               child: StreamBuilder(
@@ -50,7 +49,7 @@ class GDGCommunitySupport extends StatelessWidget {
                         (snapshot.data as QuerySnapshot).docs;
 
                     if (messages.length >= messagesGoal) {
-                      return GDGCommunityGoal();
+                      return const GDGCommunityGoal();
                     }
 
                     return Column(
@@ -72,7 +71,7 @@ class GDGCommunitySupport extends StatelessWidget {
                       ],
                     );
                   }
-                  return SizedBox();
+                  return const SizedBox();
                 },
               ),
             ),

@@ -23,7 +23,8 @@ class GDGCommunityButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(label!, style: TextStyle(fontSize: 20, color: Colors.white)),
+              Text(label!,
+                  style: const TextStyle(fontSize: 20, color: Colors.white)),
               const SizedBox(width: 10),
               Icon(icon!, color: Colors.white, size: 30),
             ],

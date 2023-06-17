@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gdg_community_app/screens/support_page.dart';
+import 'package:gdg_community_app/widgets/glowing_button.dart';
 import 'package:gdg_community_app/widgets/member_list.dart';
 
 import '../models/model.dart';
@@ -83,13 +83,13 @@ class GDGCommunityHome extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
+      floatingActionButton: GlowingButton(
+        onTap: () {
           Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => GDGCommunitySupport()));
+            MaterialPageRoute(
+                builder: (context) => const GDGCommunitySupport()),
+          );
         },
-        backgroundColor: Utils.secondaryColor,
-        child: const Icon(Icons.chat_bubble, color: Colors.white),
       ),
     );
   }
